@@ -4,10 +4,10 @@ A Babel 7 compatible preset to fully support loading modules as ESM in the
 browser natively. This preset will:
 
 - Automatically inline environment variables
-- Runs dead code elimination
-- Transforms CommonJS to ESM
-- Converts global imports to relative paths using `require.resolve`
-- Adds missing `.js` extension
+- Run dead code elimination
+- Transform CommonJS to ESM
+- Convert global imports to relative paths using `require.resolve`
+- Add missing `.js` extension
 
 ### Usage
 
