@@ -2,33 +2,31 @@
 
 [![Build Status](https://travis-ci.org/tbranyen/babel-plugin-resolve-imports.svg?branch=master)](https://travis-ci.org/tbranyen/babel-plugin-resolve-imports)
 
-A Babel 7 compatible transform to convert import paths to browser-compatible
-source paths. Users of previous module systems are used to using extensionless
-imports and files from `node_modules`. This module is designed to make any
-module loadable by the web module system.
+A Babel 7 compatible preset to fully support loading modules as ESM in the
+browser natively. This preset will:
+
+- Automatically inline environment variables
+- Runs dead code elimination
+- Transforms CommonJS to ESM
+- Converts global imports to relative paths using `require.resolve`
+- Adds missing `.js` extension
 
 ### Usage
 
 ```sh
-npm install --save-dev babel-plugin-resolve-imports-for-browser
+npm install --save-dev babel-preset-browser-esm
 ```
 
-Update your babel configuration:
-
-```json
-{
-  "plugins": ["resolve-imports-for-browser"]
-}
-```
-
-Now code like this:
+Update your babel configuration, ensure you use `babel.config.js` over
+`.babelrc` to ensure `node_modules` get properly updated:
 
 ```javascript
-import PropTypes from 'prop-types';
+module.exports = {
+  presets: ['browser-esm']
+};
 ```
 
-Will turn into this:
+### Run server
 
-``` javascript
-import PropTypes from 'node_modules/prop-types/index.js';
-```
+This module pairs very nicely with [bserve](https://github.com/tbranyen/bserve)
+to run a static server and automatically transpile the JavaScript files.
