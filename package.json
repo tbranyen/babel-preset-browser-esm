@@ -1,0 +1,35 @@
+{
+  "name": "babel-preset-browser-esm",
+  "version": "1.0.0-rc",
+  "description": "Babel preset to convert and load ESM in the browser",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "keywords": [
+    "babel",
+    "preset",
+    "esm",
+    "browser"
+  ],
+  "author": "Tim Branyen (@tbranyen)",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/helper-plugin-utils": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "babel-plugin-minify-dead-code-elimination": "^0.5.0",
+    "babel-plugin-resolve-imports-for-browser": "^1.0.0-rc",
+    "babel-plugin-transform-commonjs": "^1.1.0",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3"
+  },
+  "peerDependencies": {
+    "@babel/core": ">=7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@types/node": "^10.12.2",
+    "ts-node": "7.0.1",
+    "typescript": "^3.1.1"
+  }
+}
