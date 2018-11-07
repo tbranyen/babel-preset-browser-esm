@@ -1,7 +1,5 @@
 # Babel Preset: Browser ESM
 
-[![Build Status](https://travis-ci.org/tbranyen/babel-plugin-resolve-imports.svg?branch=master)](https://travis-ci.org/tbranyen/babel-plugin-resolve-imports)
-
 A Babel 7 compatible preset to fully support loading modules as ESM in the
 browser natively. This preset will:
 
